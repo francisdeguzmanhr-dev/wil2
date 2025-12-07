@@ -1,0 +1,275 @@
+/* styles.css
+   Style variables (colors pulled from the supplied image)
+*/
+/* styles.css */
+:root{
+  --bg-1: #1c60dd;
+  --bg-2: #0a33b4;
+  --accent-orange: #f6680d;
+  --accent-gold: #f2961e;
+  --soft-bg: #e5ecfc;
+  --muted-blue: #b5cdfa;
+  --purple: #9530df;
+  --white: #ffffff;
+  --chip-border: rgba(0,0,0,0.06);
+  --card-shadow: 0 20px 40px rgba(10,30,80,0.14);
+  --chip-shadow: 0 8px 18px rgba(10,30,80,0.08);
+  --cta-shadow: 0 6px 25px rgba(246,104,13,0.24);
+  --max-width: 920px;
+}
+
+.enter-answer h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.answer-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Inter",system-ui;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.06), transparent 10%),
+              linear-gradient(180deg,var(--bg-1) 0%, #234ab6 45%, #0a33b4 100%);
+  color:#0b1733;
+  padding-bottom:40px;
+}
+
+.will-pic{
+width:330px;
+height:220px;
+border-radius:20px;
+}
+.will-pic2{
+width:370px;
+height:200px;
+border-radius:20px;
+border: #629beb 40pX;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 560px; 
+  height: 400px;  /* 3× taller than before */
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+}
+
+.video iframe {
+  width: 100%;    /* ensure the iframe fills width */
+  height: 100%;   /* follows the new height */
+  border: 0;
+  display: block;
+}
+
+.barcode iframe {
+  height: 650px;
+  width: 100%;
+  border: none;
+  overflow: hidden;      /* hides scrollbars correctly */
+  display: block;        /* prevents small gaps in some browsers */
+}
+
+
+.question {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827; /* dark text to match your theme */
+  text-align: center;
+  background-color: #f9f9f9; /* subtle card-like background */
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px; /* space between question and answer cells */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* soft shadow for depth */
+  min-height: 50px; /* ensure the div has some height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; /* visible text size */
+  font-weight: 600;
+  color: #111827; /* dark text */
+  text-align: center;
+  background-color: #f9f9f9; /* subtle card-like background */
+  padding: 16px 20px; /* more comfortable padding */
+  border-radius: 12px;
+  margin-bottom: 20px; /* space below the div */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* soft shadow */
+  min-height: 60px; /* enough height for multi-line text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5; /* improve readability */
+  word-wrap: break-word; /* wrap long text */
+}
+
+
+.answer-cell {
+  width: 88px;
+  height: 72px;
+  border: 2px solid #141313;
+  border-radius: 12px;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--bg-2);
+}
+
+/* rest unchanged … */
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.06), transparent 10%),
+              linear-gradient(180deg,var(--bg-1) 0%, #234ab6 45%, #0a33b4 100%);
+  color:#0b1733;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-bottom:40px;
+}
+
+/* Layout utilities */
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+
+/* Header */
+.site-header{height:96px; display:flex; align-items:center; background:transparent}
+.logo-strip .logo-tiles{display:flex;gap:8px;align-items:center}
+.logo-tiles .tile{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:36px;height:36px;border-radius:8px;color:#fff;font-weight:800;
+  font-family:"Poppins",sans-serif;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  font-size:15px;
+}
+.tile-w{background:#9530df}
+.tile-i{background:#f6680d}
+.tile-l{background:#1c60dd}
+.tile-p{background:#f2961e}
+.tile-i2{background:#b5cdfa;color:#0a33b4}
+.tile-c{background:#629beb}
+.tile-k{background:#eb9f55;color:#2b2b2b}
+
+.answer-cell {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #141313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.main-nav .nav-link{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:18px;font-weight:600;font-size:15px;opacity:0.95}
+
+/* chip font */
+.chip-font{font-family:"Poppins",sans-serif;color:#fff;margin:0;font-size:36px;letter-spacing:1px}
+/* Hero */
+
+.hero{padding:28px 0 48px}
+.hero-top{text-align:center;color:#fff;margin-bottom:8px}
+.hero-title{font-family:"Poppins",sans-serif;color:#fff;margin:0;font-size:36px;letter-spacing:1px}
+.hero-sub{margin:6px 0 0;font-weight:400;opacity:0.95}
+/* Hero Card */
+.hero-card{
+  margin-top:18px;
+  border-radius:28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 100%);
+  box-shadow: var(--card-shadow);
+  padding:18px;
+  border: 6px solid rgba(150,120,255,0.08);
+}
+.hero-card2{
+  margin-top:18px;
+  border-radius:28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 100%);
+  box-shadow: var(--card-shadow);
+  padding:18px;
+  border: 6px solid rgba(150,120,255,0.08);
+}
+.hero-inner{padding:18px 22px}
+
+/* Game panel layout */
+.game-panel{display:flex;flex-direction:column;gap:22px}
+.jackpot-strip{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.jack-title{font-family:"Poppins";color:var(--bg-2);font-weight:800;font-size:20px;padding:6px 12px;border-radius:12px;background:linear-gradient(90deg,var(--soft-bg),var(--muted-blue));box-shadow:0 6px 14px rgba(0,0,0,0.06)}
+.jack-values{display:flex;gap:10px;align-items:center}
+.jack-pill{
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+  min-width:35px;height:35px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:20px;background:linear-gradient(180deg,#f6680d,#f6680d);box-shadow:0 8px 18px rgba(0,0,0,0.18)
+}
+
+/* Answer area */
+.enter-answer h2{font-family:"Poppins",sans-serif;margin:0;font-size:18px;color:var(--bg-2)}
+.answer-boxes{display:flex;gap:12px;margin-top:14px}
+.answer-cell{
+  width:88px;height:72px;border-radius:12px;background:var(--white);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 8px 18px rgba(10,30,80,0.06);
+  display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--bg-2)
+}
+
+/* Color chips */
+.color-chips{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:6px}
+.chip{
+  border-radius:12px;height:56px;border:1px solid var(--chip-border);
+  box-shadow: var(--chip-shadow);cursor:pointer;outline:none;transition:transform .12s, box-shadow .12s;
+}
+.chip:active, .chip:focus{transform:translateY(2px);box-shadow:0 6px 12px rgba(0,0,0,0.12)}
+.chip.selected{outline:4px solid rgba(255,255,255,0.16);transform:scale(1.04)}
+
+/* CTA */
+.cta-row{display:flex;justify-content:center;margin-top:18px}
+.cta{
+  display:inline-flex;align-items:center;gap:12px;padding:16px 44px;border-radius:28px;
+  background:linear-gradient(180deg,var(--accent-orange), #d35400);
+  color:#fff;border:none;font-family:"Poppins",sans-serif;font-weight:800;font-size:18px;
+  box-shadow: var(--cta-shadow); cursor:pointer;
+  transition:transform .12s, box-shadow .12s;
+  margin: 15px;
+}
+.cta:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(246,104,13,0.28)}
+.cta-icon{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);padding:8px;border-radius:8px}
+
+/* Footer */
+.site-footer{margin-top:36px;color:rgba(255,255,255,0.9)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.footer-links a{color:rgba(255,255,255,0.9);margin-left:12px;text-decoration:none;font-size:13px}
+
+/* Responsive */
+@media (max-width:720px){
+  .answer-cell{width:60px;height:56px;font-size:20px}
+  .color-chips{grid-template-columns:repeat(4,1fr)}
+  .header-inner{flex-direction:column;gap:8px;align-items:flex-start}
+  .main-nav{display:flex;gap:12px}
+  .hero-title{font-size:28px}
+  .cta{padding:12px 26px;font-size:16px}
+}
+
+/*  Ensures chip letters always stay centered & visible */
+.answer-cell {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
